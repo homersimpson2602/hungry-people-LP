@@ -4,29 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/main.css">
   <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
   <title>Hungry People</title>
 </head>
 
 <body>
-  <section class="main-section">
+  <section id="main-section" class="main-section">
     <div class="container">
       <header>
         <ul class="menu menu--left">
-          <li>home</li>
-          <li>about</li>
-          <li>team</li>
-          <li>booking</li>
+          <a href="#main-section">
+            <li>home</li>
+          </a>
+          <a href="#about-section">
+            <li>about</li>
+          </a>
+          <a href="#our-team-section">
+            <li>team</li>
+          </a>
+          <a href="#book-a-table-section">
+            <li>booking</li>
+          </a>
         </ul>
         <div class="logo">
           <a href=""><img src="img/logo.svg" alt=""></a>
         </div>
         <ul class="menu menu--right">
-          <li>menu</li>
-          <li>galerie</li>
-          <li>events</li>
-          <li>contact</li>
+          <a href="#delicious-menu-section">
+            <li>menu</li>
+          </a>
+          <a href="#events-section">
+            <li>events</li>
+          </a>
+          <a href="#photo-gallery-section">
+            <li>galerie</li>
+          </a>
+          <a href="#contact-section">
+            <li>contact</li>
+          </a>
         </ul>
       </header>
       <div class="main-section__content">
@@ -36,24 +53,39 @@
           <h1>hungry people</h1>
           <div class="decor-hr"></div>
           <div class="buttons">
-            <button>BOOK TABLE</button>
-            <button class="transparent">EXPLORE</button>
+            <a href="#book-a-table-section"><button>BOOK TABLE</button></a>
+            <a href="#map-section"><button class="transparent">EXPLORE</button></a>
           </div>
-          <div class="link-down">
+          <a href="#about-section">
+            <div class="link-down">
+              <div class="link-down__body">
+                <img src="img/down-chevron.svg" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="social">
+          <a href="#">
+            <div><img src="img/facebook.svg" alt=""></div>
+          </a>
+          <a href="#">
+            <div><img src="img/twitter.svg" alt=""></div>
+          </a>
+          <a href="#">
+            <div><img src="img/instagram.svg" alt=""></div>
+          </a>
+        </div>
+        <a href="#main-section">
+          <div class="link-down link-down--reverse">
             <div class="link-down__body">
               <img src="img/down-chevron.svg" alt="">
             </div>
           </div>
-        </div>
-        <div class="social">
-          <div><img src="img/facebook.svg" alt=""></div>
-          <div><img src="img/twitter.svg" alt=""></div>
-          <div><img src="img/instagram.svg" alt=""></div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
-  <section class="about-section">
+  <section id="about-section" class="about-section">
     <div class="container">
       <div class="about-info">
         <h2>about us</h2>
@@ -69,7 +101,7 @@
       </div>
     </div>
   </section>
-  <section class="our-team-section white-text">
+  <section id="our-team-section" class="our-team-section white-text">
     <h3>our team</h3>
     <div class="container">
       <div class="img-wrapper">
@@ -86,7 +118,7 @@
       </div>
     </div>
   </section>
-  <section class="book-a-table-section">
+  <section id="book-a-table-section" class="book-a-table-section">
     <div class="container">
       <div class="book-a-table-form-wrapper">
         <h2>book a table</h2>
@@ -146,7 +178,7 @@
         <span class="checkmark"></span>
       </div>
       <div class="switch__item">
-        <input type="radio" name="switch-slider" id="switch-slider-2">
+        <input type="radio" name="switch-slider" id="switch-slider-2" checked>
         <span class="checkmark"></span>
       </div>
       <div class="switch__item">
@@ -155,7 +187,7 @@
       </div>
     </div>
   </section>
-  <section class="delicious-menu-section">
+  <section id="delicious-menu-section" class="delicious-menu-section">
     <h2>Deliciuos menu</h2>
     <div class="decor-hr"></div>
     <p class="delicious-menu-section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
@@ -261,7 +293,7 @@
       </ul>
     </div>
   </section>
-  <section class="events-section white-text">
+  <section id="events-section" class="events-section white-text">
     <h3>private events</h3>
     <div class="container">
       <div class="img-wrapper">
@@ -273,7 +305,7 @@
     </div>
     <p>For private events please call: <strong>+40 729 131 637/+40 726 458 782</strong> or use the contact form.</p>
   </section>
-  <section class="photo-gallery-section">
+  <section id="photo-gallery-section" class="photo-gallery-section">
     <div class="slider">
       <img src="img/slide1.jpg" alt="">
       <img src="img/slide2.jpg" alt="">
@@ -281,11 +313,11 @@
       <img src="img/slide4.jpg" alt="">
     </div>
   </section>
-  <section class="contact-section">
+  <section id="contact-section" class="contact-section">
     <h2>contact</h2>
     <div class="decor-hr"></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
-    <form action="" class="contact-form">
+    <form action="#" class="contact-form">
       <input type="text" placeholder="Name">
       <input type="email" placeholder="Email">
       <input type="tel" placeholder="Phone">
@@ -300,7 +332,7 @@
       </div>
     </form>
   </section>
-  <section class="map-section">
+  <section id="map-section" class="map-section">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9932.865686291638!2d-0.10687211093699478!3d51.509245378788506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a905ae1621%3A0xe700778eb8b2878e!2z0KjQtdC60YHQv9C40YDRgSDQk9C70L7Rg9Cx!5e0!3m2!1sru!2sru!4v1605530509448!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </section>
   <footer>

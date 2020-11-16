@@ -1,2 +1,3 @@
-# hungry-people-LP
-LP for a restaurant
+# Hungry-People Landing Page  
+**_uncommercial_** layot LP for a restaurant
+---  
