@@ -188,6 +188,11 @@
     flex-direction: column;
   }
 
+  section.contact-section form input,
+  section.contact-section form {
+    margin-bottom: 10px;
+  }
+
   section.contact-section .contact-form .contact-form__info {
     flex-direction: column;
     width: 300px;
