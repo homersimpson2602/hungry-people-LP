@@ -1,0 +1,157 @@
+@media screen and (max-width: 1439px) {
+  .container {
+    width: 100%;
+  }
+
+  .container header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container header img {
+    display: none;
+  }
+
+  .container header ul:first-child {
+    margin-right: 0px;
+  }
+  
+  .container header ul:last-child {
+    margin-left: 0px;  
+  }
+
+  .main-section .main-section__content{
+    margin-top: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 60px 1fr ;
+    justify-items: center;
+    grid-template-areas: 
+      "operating"
+      "social"
+      "heading";
+  }
+
+  div.main-section__content .operating-mode {
+    position: static;
+    justify-self: center;
+    grid-area: operating;
+  }
+
+  div.main-section__content .operating-mode>span {
+    position: static;
+    display: block;
+    text-align: center;
+    transform: none;
+  }
+
+  div.main-section__content .social {
+    grid-area: social;
+    justify-self: center;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+  }
+
+ 
+
+  .about-section div.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+  }
+
+  .about-info,
+  .master-chef-info,
+  .specialties-section {
+    text-align: center;
+  }
+
+  .our-team-section div.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 300px;
+  }
+
+  .book-a-table-section div.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+  }
+
+  .specialties-section div.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 400px;
+  }
+
+  .specialties-section .specialties-info {
+    align-self: start;
+  }
+
+  section.delicious-menu-section {
+    padding: 50px 10px;
+  }
+
+  section #delicious-menu__nav {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 10px auto;
+  }
+
+  #delicious-menu__nav li a {
+    width: 80px;
+  } 
+
+  section.delicious-menu-section .sm {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+  }
+
+  section.delicious-menu-section .fw {
+    display: none;
+  }
+
+  .events-section div.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  } 
+
+  .photo-gallery-section {
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .photo-gallery-section>div.slider {
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
+
+  section.contact-section {
+    padding: 50px 10px;
+  }
+
+  section.contact-section form {
+    grid-template-rows: 60px 120px 130px;
+  }
+  
+  section.contact-section .contact-form__footer {
+    flex-direction: column-reverse;
+  }
+
+  section.contact-section .contact-form__info{
+    display: flex;
+    padding: 0px 16px;
+    color: #999;
+    font-size: .9rem;
+    font-weight: 700;
+    line-height: 60px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .contact-form__footer input[type="submit"] {
+    width: 100%;
+  }
+  
+
+}

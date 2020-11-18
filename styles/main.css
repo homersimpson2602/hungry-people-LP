@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Open+Sans:wght@400;700&display=swap');
 @import url("animations.css");
+@import url("1439max-width.css");
+@import url("754max-width.css");
+
 /* font-family: 'Lobster Two', cursive;
 font-family: 'Open Sans', sans-serif; */
 
@@ -74,7 +77,7 @@ input:focus, select:focus, option:focus, textarea:focus {
 }
 
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -96,7 +99,8 @@ section {
 } 
 
 .about-section p,
-.our-team-section p {
+.our-team-section p,
+.specialties-section p {
   display: inline-block;
   max-width: 600px;
   padding: 20px;
@@ -120,9 +124,16 @@ section {
   margin: 0 auto;
 }
 
+i.sm-menu {
+  display: none;
+  font-size: 2.5rem;
+}
+
 .img-wrapper {
   position: relative;
   text-align: center;
+  width: 575px;
+  margin: 0 auto;
 }
 
 
@@ -189,7 +200,7 @@ header img {
 }
 
 .main-section__content .operating-mode>span {
-  width: 500px;
+  max-width: 500px;
   position: absolute;
   left: -230px;
   transform: rotate(-90deg);
@@ -234,7 +245,7 @@ header img {
 
 .main-section__content .link-down {
   position: relative;
-  bottom: -50px;
+  bottom: 0px;
   margin: 82px auto 0px;
   padding: 10px 9px;
   text-align: center;
@@ -250,6 +261,8 @@ header img {
   position: fixed;
   right: 20px;
   bottom: 3vh;
+  z-index: 1000;
+  /* display: none; */
 }
 
 .main-section__content .link-down--reverse .link-down__body{
@@ -293,9 +306,6 @@ header img {
 /*---------------- about us ----------------- */
 
 
-.img-wrapper {
-  position: relative;
-}
 
 .about-section .img-wrapper::after {
   content: "";
@@ -306,7 +316,7 @@ header img {
   z-index: 1000;
   position: absolute;
   top: 160px;
-  right: -30px;
+  right: -90px;
 }
 
 /* ---------------- our-team ---------------- */
@@ -326,7 +336,7 @@ header img {
   z-index: 1000;
   position: absolute;
   top: 160px;
-  right: 450px;
+  left: -90px;
 }
 
 /* ------------------- book a table ------------------ */
@@ -350,7 +360,7 @@ select:hover {
 }
 
 .book-a-table-section form {
-  margin-top: 20px;
+  margin: 40px;
 }
 
 .book-a-table-section form button {
@@ -373,7 +383,7 @@ select:hover {
   z-index: 1000;
   position: absolute;
   top: 160px;
-  right: -30px;
+  right: -90px;
 }
 
 /* ----------- specialties ---------- */
@@ -382,6 +392,19 @@ select:hover {
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 50px;
+}
+
+.specialties-section .container .img-wrapper::before {
+  content: "";
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  border: 20px solid #E8C300;
+  z-index: 1000;
+  position: absolute;
+  top: 160px;
+  left: -90px;
+  /* display: block; */
 }
 
 .specialties-section .switch {
@@ -434,7 +457,7 @@ select:hover {
 
 .delicious-menu-section__desc {
   display: block;
-  width: 565px;
+  max-width: 565px;
   margin: 20px auto;
   text-align: center;
   font-weight: 700;
@@ -448,7 +471,6 @@ select:hover {
 .delicious-menu-section ul {
   display: flex;
   list-style: none;
-  width: 360px;
 }
 
 
@@ -462,12 +484,12 @@ select:hover {
 #delicious-menu__nav {
   grid-column-start: 1;
   grid-column-end: 4;
-  min-width: 840px;
   margin: 50px auto;
 }
 
 .delicious-menu__nav li {
   border-right: 1px solid rgba(51, 51, 51, 0.2);
+  height: 50px;
 }
 
 .delicious-menu__nav li:last-child {
@@ -475,7 +497,7 @@ select:hover {
 }
 
 .delicious-menu__nav li a {
-  display: block;
+  display: inline-block;
   width: 120px;
   height: 50px;
   line-height: 50px;
@@ -523,7 +545,7 @@ select:hover {
   z-index: 1000;
   position: absolute;
   top: 160px;
-  right: 450px;
+  left: -90px;
 }
 
 .events-section .container .img-wrapper:first-child::after {
@@ -544,7 +566,7 @@ select:hover {
   z-index: 1000;
   position: absolute;
   top: 248px;
-  right: -115px;
+  right: -150px;
 }
 
 .events-section .container .img-wrapper:last-child::after {
@@ -556,7 +578,7 @@ select:hover {
   z-index: 1000;
   position: absolute;
   top: 160px;
-  right: -30px;
+  right: -90px;
 }
 
 .events-section .container .img-wrapper:last-child::before {
@@ -577,7 +599,7 @@ select:hover {
   z-index: 1000;
   position: absolute;
   top: 248px;
-  right: 280px;
+  left: -150px;
 }
 
 .events-section p {
@@ -586,23 +608,17 @@ select:hover {
 }
 
 /* ----------------- photo galery ---------------- */
-.photo-gallery-section {
-  padding: 0px;
-}
-
 .photo-gallery-section .slider {
   margin: 0 auto;
-  width: 1440px;
-  height: 360px;
-  padding: 0px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .photo-gallery-section img {
   display: block;
-  width: 360px;
   transition: all .4s ease-in-out;
+  /* overflow: hidden; */
 }
 
 .photo-gallery-section img:hover {
@@ -618,7 +634,7 @@ select:hover {
 
 .contact-section p {
   display: block;
-  width: 565px;
+  max-width: 565px;
   margin: 20px auto 50px;
   text-align: center;
   font-weight: 700;
@@ -627,7 +643,7 @@ select:hover {
 
 .contact-section form {
   margin: 0 auto;
-  width: 1280px;
+  max-width: 1280px;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -692,3 +708,4 @@ footer span {
   line-height: 100px;
   color: #999;
 }
+
